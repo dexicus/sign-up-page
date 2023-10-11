@@ -42,192 +42,192 @@ table {
 	border-spacing: 0;
 }
 
+/*//////////////////////////////////////*/
+
 :root {
-    font-family: 'Archivo', sans-serif;
+	font-family: 'Merienda', cursive;
 }
 
-.content {
-    display: flex;
+body {
+	height: 100vh;
+	display: flex;
 }
 
-.image-sidebar {
-    display: flex;
-    flex: 2;
-    background-image: url("img/earth.jpg");
-    height: 100vh;
-    justify-content: center;
-    align-items: flex-start;
+.sidebar {
+	padding: 225px 0;
+	background-image: url(./img/ocean.jpg);
+	background-position: center;
+	flex: 1;
+	max-width: 28%;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 6rem;
-    position: relative;
-    padding-right: 20px;
-    top: 175px;
+.titlebar {
+	padding: 8px 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+
+.titlebar img {
+	width: 6rem;
+	stroke: white;	
+}
+
+.titlebar h1 {
+	font-size: 3rem;
+	color: white;
+	text-align: center;
+	font-weight: bolder;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 4;
-    height: 100vh;
+	font-family: sans-serif;
+	flex: 2;
+	background-color: aliceblue;
+	display: flex;
+	flex-flow:column;
 }
 
-.intro,.form,.actions {
-    padding-left: 40px;
+.main div {
+	padding: 0 20% 0 50px;
+	
 }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex: 4;
-    background-color: rgb(209, 209, 209);
+.blockquote,
+.user-details h2 {
+	font-weight: bolder;
+	word-spacing: 0.20em;
+	font-size: 1.7rem;
 }
 
-.intro p, legend, label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    max-width: 55%;
-    line-height: 1.2;
-    letter-spacing: 105%;
-}
+.blockquote {
+	height: 272px;
+	align-self: start;
+	margin-bottom: 65px;
 
-.intro p strong {
-    font-style: italic;
-}
-
-.intro p:nth-child(2) {
-    padding-bottom: 24px;
-}
-
-.intro p:last-child {
-    padding-bottom: 56px;
-}
-
-
-.form {
-    flex: 4;
-}
-
-form, fieldset {
-    height: 100%;
-}
-
-.form legend {
-    padding: 24px 0;
-}
-
-input, textarea, select, label {
-    width : 250px;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-label {
-    display: block;
-    font-weight: 100;
-    font-size: 0.75rem;
-    color: rgb(49, 49, 49);
-    padding-bottom: 3px;
-}
-
-input {
-    border: solid 1px rgb(201, 201, 201);
-    border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	gap: 30px;
+	max-width: 60%;
 }
 
 .user-details {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: calc(100% / 2 - 10px);
-    column-gap: 30px;
+	background-color: white;
 }
 
-.user-details input {
-    height: 35px;
-    padding: 8px;
+.user-details h2 {
+	padding-top: 20px;
 }
 
-.user-details .input-box input:focus {
-    outline: none;
-    background-color: aliceblue;
-    box-shadow: 0px 0px 5px #001aff;
+form {
+	padding: 24px 0 32px 0;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px 80px;
+}
+
+form label {
+	font-size: small;
+	letter-spacing: 2px;
+	word-spacing: 3px;
+}
+
+input:hover {
+	border: 1px solid blue;
 }
 
 
-input[type="password"]:invalid {
-    position: relative;
-    box-shadow: 0px 0px 2px #ff0000;
+input:valid:focus {
+	border: 1px solid rgb(0, 255, 0);
+	box-shadow: 0px 0px 3px 1px rgba(0, 255, 0, 0.5)
 }
 
-input[type="password"]::after {
-    content: '* Passwords are empty or do not match';
-    position: fixed;
+input {
+	appearance: none;
+	display: block;
+	width: 300px;
+	height: 30px;
+	margin-top: 3px;
+	font-size: 1rem;
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
 }
 
-.actions {
-    padding-top: 30px;
-    flex: 3;
-    background-color: rgb(209, 209, 209);
+input[type=email]:focus:invalid 
+
+input:not(:focus):not(:placeholder-shown):invalid,
+input:focus:invalid  {
+	border: 1px solid rgba(255,0,0);
+	box-shadow: 0px 0px 3px 1px rgba(155, 0, 0, 0.5);
 }
 
-.actions button[type="submit"] {
-    font-size: 1.1rem;
-    background-color: rgb(0, 12, 116);
-    color: white;
-    font-weight: bolder;
-    width: 225px;
-    padding: 8px;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    margin-bottom: 35px;
-    box-shadow: 0px 0px 2px #000000;
+label p,
+span::before {
+	content: "";
+	font-size: small;
+	letter-spacing:normal;
+	word-spacing: normal;
+	padding-top: 2px;
 }
 
-.actions button[type="submit"]:hover {
-    font-size: 1.1rem;
-    background-color: rgb(0, 20, 201);
-    color: white;
-    font-weight: bolder;
-    width: 225px;
-    padding: 8px;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    margin-bottom: 35px;
-    transition: ease-out;   
+.password + span::before {
+	content: "Must contain 8 characters, and at least 1 upper case "
+	"letter, 1 lower case letter, and 1 number.";
+	position:absolute
 }
 
-.actions button[type="submit"]:active {
-    font-size: 1.1rem;
-    background-color: rgb(0, 20, 201);
-    color: white;
-    font-weight: bolder;
-    width: 225px;
-    padding: 8px;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    margin-bottom: 35px;
-    box-shadow: 0px 0px 2px #000000 inset;
-    transition: ease-out;
+.pwd-mismatch + span::before {
+	color: red;
+	content: "* Passwords do not match";
+}
+
+.submission {
+	margin-top: 30px;
+}
+
+button {
+	margin-bottom: 30px;
+	padding: 12px 45px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	background-color: rgb(32, 86, 79);
+	color: white;
+	outline: none;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+button:hover:enabled {
+	box-shadow: 0px 0px 3px 1px rgba(155, 0, 0, 0.5);
+	transition: box-shadow 0.1s ease;
+}
+
+button:active {
+	box-shadow: inset 0px 0px 5px 1px #000000;
+	outline: none;
+	transition: box-shadow 5s ease;
+}
+
+.btn-disabled {
+	cursor: not-allowed;
+	background-color: rgb(163, 163, 163);
+	color: rgb(212, 212, 212);
+	box-shadow: none;
 }
 
 a {
-    color: rgb(0, 12, 116);
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 0.05rem;
+	color: rgba(32,86,79,255);
+	font-weight: bold;
+	text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+	color: rgba(32,86,79,255);
+	font-weight: bold;
+	text-decoration: underline;
 }

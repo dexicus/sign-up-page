@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Now!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <div class="image-sidebar">
+            <div class="logo">
+                <img src="img/logo.png" class="logo-img" alt="logo" height="150px">
+                <span class="logo-name" style="color: white;">FTR</span>
+            </div>
+        </div>
+        <div class="main">
+            <section class="intro">
+                <p>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams.</p>
+                <p>Sign up <strong>now</strong> to get started.</p>
+                <p>You <strong>know</strong> you want to.</p>
+            </section>
+            <section class="form">
+                <form action="https://httpbin.org/post" method="post" id="signupForm">
+                    <fieldset>
+                        <legend>Let's do this!</legend>
+                            <div class="user-details">
+                                <div class="input-box">
+                                    <label for="firstName">FIRST NAME</label>
+                                    <input type="text" name="firstName" id="firstName">
+                                </div>
+                                
+                                <div class="input-box">
+                                    <label for="lastName">LAST NAME</label>
+                                    <input type="text" name="lastName" id="lastName">
+                                </div>
+                                
+                                <div class="input-box">
+                                    <label for="userEmail">EMAIL</label>
+                                    <input type="email" name="email" id="userEmail">
+                                </div>
+                                
+                                <div class="input-box">
+                                    <label for="phoneNumber">PHONE NUMBER</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="11">
+                                </div>
+                                
+                                
+                                <div class="input-box">
+                                    <label for="userPassword">PASSWORD</label>
+                                    <input type="password" id="userPassword" name="password" required>
+                                </div>
+                                
+                                
+                                <div class="input-box">
+                                    <label for="confirmPassword">CONFIRM PASSWORD</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" maxlength="20" required>
+                                </div>
+                            </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="actions">
+                <button type="submit" class="submit" form="signupForm">Create Account</button><p>Already have an acccount? <a href="">Log in</a></p>
+
+            </section>
+        </div>
+    </div>
+</body>
+</html>
